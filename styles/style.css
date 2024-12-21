@@ -323,30 +323,30 @@ tr:hover td {
 
 .gallery {
     display: flex;
-    flex-wrap: wrap; /* Allows wrapping when there’s no more space */
-    gap: 20px; /* Spacing between images */
-    justify-content: center; /* Center images in the container */
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
 .gallery img {
     width: auto;
     height: auto;
-    object-fit: cover; /* Ensures images maintain aspect ratio */
-    border-radius: 8px; /* Optional: Adds rounded corners */
-    transition: transform 0.2s ease; /* Smooth hover effect */
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
 }
 
 .player-image {
-    flex: 1 1 calc(20% - 20px); /* Dynamic width: Smaller size, fits 5 images per row */
-    max-width: 200px; /* Maximum width of each image */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensure images are cropped properly if needed */
-    border-radius: 8px; /* Optional: Adds rounded corners */
-    transition: transform 0.2s ease; /* Smooth hover effect */
+    flex: 1 1 calc(20% - 20px);
+    max-width: 200px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
 }
 
 .player-image:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
+    transform: scale(1.05);
 }
 
 .modal{
@@ -433,13 +433,14 @@ tr:hover td {
 }
 
 .active, .accordion:hover {
-    background-color: #ccc; 
+    background-color: #ffc9fb; 
   }
   
   .panel {
     padding: 0 18px;
     display: none;
-    background-color: white;
+    color: var(--foreground);
+    background-color: var(--background);
     overflow: hidden;
   }
 

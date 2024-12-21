@@ -10,9 +10,7 @@ const enableDarkMode = () => {
 }
 
 const disableDarkMode = () => {
-    //1. add class darkmode to the body
     document.body.classList.remove('darkmode');
-    //2. update darkmode in localstorage
     localStorage.setItem('darkMode', null);
     darkModeToggle.textContent = 'Dark theme';
     
@@ -25,11 +23,9 @@ if (darkMode === 'enabled'){
 darkModeToggle.addEventListener('click', () => {
     // get their darkMode setting
     darkMode = localStorage.getItem('darkMode'); 
-    // if it not current enabled, enable it
     if (darkMode !== 'enabled') {
       enableDarkMode();
       console.log(darkMode);
-    // if it has been enabled, turn it off  
     } else {  
       disableDarkMode();
       console.log(darkMode);
