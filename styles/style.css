@@ -7,16 +7,56 @@
 
 html, body {
     overflow-x: hidden;
-    background-color: rgb(6 3 14);
+    background-color: rgb(6 3 14) ;
     font-family: 'Anta';
     font-size: 22px;
+    background: var(--background);
+    color: var(--foreground);
 }
 
-.header {
-    background-color: rgb(6 3 14);
+:root {
+    /* Body colors */
+    --clr-light: #e9edc9;
+    --clr-dark: rgb(6, 3, 14); 
+
+    --clr-header-bg-light: #ccd5ae;
+    --clr-footer-bg-light: #ccd5ae;
+    --clr-header-font-light: black;
+    --clr-footer-font-light: black;
+
+    --clr-header-bg-dark: rgb(0, 0, 0);
+    --clr-footer-bg-dark: rgb(0, 0, 0); 
+    --clr-header-font-dark: white;
+    --clr-footer-font-dark: white;
+
+    /* Default theme (light mode) */
+    --background: var(--clr-light);
+    --foreground: var(--clr-dark);
+    --header-bg: var(--clr-header-bg-light);
+    --footer-bg: var(--clr-footer-bg-light);
+    --header-font: var(--clr-header-font-light);
+    --footer-font: var(--clr-footer-font-light);
+}
+
+.darkmode {
+    /* dark mode body */
+    --background: var(--clr-dark);
+    --foreground: var(--clr-light);
+
+    /* dark mode header/footer */
+    /* darkmode is opposite of usual color*/
+    --header-bg: var(--clr-header-bg-dark);
+    --footer-bg: var(--clr-footer-bg-dark);
+    --header-font: var(--clr-header-font-dark);
+    --footer-font: var(--clr-footer-font-dark);
+}
+
+  .header {
+    background: var(--header-bg);
+    color: var(--header-font);
     width: 100%;
     height: fit-content;
-    color: white;
+    padding: 16px;
 }
 
 .wrapper {
@@ -57,6 +97,12 @@ html, body {
     gap: 15px;
     align-items: center;
     margin-top: 10px;
+    
+}
+
+.navbar .links{
+    color: var(--header-footer-font);
+    background-color: var(--header-footer-bg);
 }
 
 .navbar2 ul{
@@ -70,7 +116,8 @@ html, body {
 
 .navbar2 .links {
     text-decoration: none;
-    color: white;
+    color: var(--foreground);
+    background-color: var(--background);
     padding: 10px 20px; 
     border-radius: 10px;
     transition: all 0.3s ease;
@@ -109,7 +156,8 @@ html, body {
     border-radius: 10px;
     margin: 50px auto;
     width: 70%;
-    background-color: rgb(6 3 14);
+    color: var(--foreground);
+    background-color: var(--background);
 }
 
 table {
@@ -122,7 +170,9 @@ table {
 }   
 
 table, th, td {
-    border: 1px solid white;
+    border: 1px solid;
+    color: var(--foreground);
+    background-color: var(--background);
 }
 
 th, td {
@@ -136,8 +186,8 @@ th {
 }
 
 td {
-    background-color: rgb(6 3 14);
-    color: white;
+    color: var(--foreground);
+    background-color: var(--background);
 }
 
 tr:hover td {
@@ -146,15 +196,16 @@ tr:hover td {
 
 
 .footer {
-    background-color: rgb(0, 0, 0);
-    color: white;
+    background: var(--footer-bg);
+    color: var(--footer-font);
     display: block;
     justify-content: center;
     align-items: center;
     text-align: center;
     width: 100%;
-    padding-bottom: 64px;
+    padding: 16px;
 }
+
 .logo_image{
     width: 200px;
     height: 200px;
@@ -171,7 +222,6 @@ tr:hover td {
 
 .icons a {
     margin-top: 16px;
-    color: white;
     font-size: 30px;
     padding: 0 16px;
     text-decoration: none;
@@ -235,7 +285,6 @@ tr:hover td {
 
 .about{
     margin: 48px;
-    width: 80%;
     height: fit-content;
     background-color: rgb(48, 35, 84);
     color: white;
@@ -251,6 +300,150 @@ tr:hover td {
     font-size: 16px; 
     background-color: rgb(193, 190, 190); 
   }
+
+.theme-switch{
+    background-color: rgb(32, 208, 208);
+    border-radius: 8px;
+    font-family: 'Anta';
+    font-size: 24px;
+    padding: 8px;
+}
+
+.theme-switch:hover{
+    background-color:rgb(27, 168, 168);
+}
+
+
+.gallery-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 8%;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping when there’s no more space */
+    gap: 20px; /* Spacing between images */
+    justify-content: center; /* Center images in the container */
+}
+
+.gallery img {
+    width: auto;
+    height: auto;
+    object-fit: cover; /* Ensures images maintain aspect ratio */
+    border-radius: 8px; /* Optional: Adds rounded corners */
+    transition: transform 0.2s ease; /* Smooth hover effect */
+}
+
+.player-image {
+    flex: 1 1 calc(20% - 20px); /* Dynamic width: Smaller size, fits 5 images per row */
+    max-width: 200px; /* Maximum width of each image */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure images are cropped properly if needed */
+    border-radius: 8px; /* Optional: Adds rounded corners */
+    transition: transform 0.2s ease; /* Smooth hover effect */
+}
+
+.player-image:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    margin: auto;
+    margin-top: 56px;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+/* Caption */
+#caption {
+    margin: 15px auto;
+    text-align: center;
+    color: #ccc;
+    font-size: 18px;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#arrow-right {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    font-size: 32px;
+    color: white;
+    cursor: pointer;
+}
+
+#arrow-left {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    font-size: 32px;
+    color: white;
+    cursor: pointer;
+}
+
+.about-players{
+    margin: 16px;
+}
+
+.accordion{
+    background-color: #37003c;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc; 
+  }
+  
+  .panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+  }
+
+/*___________________________________________________________________*/
 
 @media (max-width: 1024px) {
     .wrapper {
