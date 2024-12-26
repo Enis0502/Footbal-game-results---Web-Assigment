@@ -1,0 +1,98 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://fonts.googleapis.com/css?family=Anta' rel='stylesheet'>
+    <link rel="icon" href="../images/logofinal.png" type="image/png">
+    
+    <title> Gallery </title>
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="wrapper">
+            <div class="header-left">
+                <a href="index.html"><img src="../images/logofinal.png" alt="logo-image" class="logo_image"></a>
+            </div>
+            <div class="header-right">
+                <h1>Welcome to EBu-Score</h1>
+                <nav class="navbar">
+                    <a href="index.html" class="links" target="_blank" >Football</a>
+                    <a href="aboutus.html" class="links" target="_blank" > About Us</a>
+                    <a href="gallery.html" class="links" target="_blank"> Gallery </a>
+                    <a href="news.html" class="links" target="_blank"> News </a>
+                    <a href="login.html" class="links" id="login" target="_blank"><b>Register/Login</b></a>
+                    <button id="dark-mode-toggle" class="theme-switch"> Light theme </button>
+                    
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="gallery-container">
+        <div class="gallery">
+            <img src="../images/img1.jpg" alt="Cole palmer - Chelsea" class="player-image">
+            <img src="../images/img2.jpg" alt="Kieran Trippier - Newcastle" class="player-image">
+            <img src="../images/img3.jpg" alt="Emiliano Martinez - Aston Villa" class="player-image">
+            <img src="../images/img4.jpg" alt="Adama Traore - Wolves" class="player-image">
+            <img src="../images/img5.jpg" alt="Jamie Vardy - Leicester" class="player-image">
+            <img src="../images/img6.jpg" alt="Mohamed Salah - Liverpool" class="player-image">
+            <img src="../images/img7.jpg" alt="Jeremy Doku - Manchester City" class="player-image">
+            <img src="../images/img8.jpg" alt="Phil Foden - Manchester City" class="player-image">
+            <img src="../images/img9.jpg" alt="Antony - Manchester United" class="player-image">
+            <img src="../images/img10.jpg" alt="Marcus Rashford - Manchester United" class="player-image">
+        </div>
+    </div>
+
+    <div id="image-modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-image">
+        <i class="fa-solid fa-arrow-right" id="arrow-right"></i>
+        <i class="fa-solid fa-arrow-left" id="arrow-left"></i>
+        <div id="caption"></div>
+
+    </div>
+    
+    <div class="about">
+        <h2> Best performing players in the last season: </h2>
+        <p> Click here to read more about each one of them <i class="fa-solid fa-plus" id="expand" onclick="show()"></i> </p>
+        <div id="about-players" class="about-players">
+            <ul>
+                <li> <b>Cole Palmer</b>: Palmer, a talented midfielder currently playing in Chelsea, is known his creativity and vision on pitch, which proves a score of 16 games and 11 goals.</li> <br>
+                <li> <b>Kieran Trippier</b>: Right-back for Newcastle United, he is admired for the way he launches pin-point crosses and exerts dominance over set plays.</li> <br>
+                <li> <b>Emiliano Martínez</b>: The Aston Villa goalkeeper celebrated for his reflexes was also among the winning group in the World Cup-Clutch penalty saves were some of his top actions.</li> <br>
+                <li> <b>Adama Traoré</b>: A winger with blistering pace, Traoré currently plays for Fulham, often dazzling defenders with his speed and strength.</li> <br>
+                <li> <b>Jamie Vardy</b>: The Leicester City striker is a Premier League legend, known for his incredible goal-scoring record and tenacious playstyle.</li> <br>
+                <li> <b>Mohamed Salah</b>: A prolific forward for Liverpool, Salah consistently delivers goals and assists, cementing his place as one of the world's best attackers.</li> <br>
+                <li> <b>Jérémy Doku</b>: The young winger for Manchester City is a rising star, admired for his dribbling skills and ability to create chances.</li> <br>
+                <li> <b>Phil Foden</b>: A versatile attacking midfielder for Manchester City, Foden is a key playmaker with an eye for goal and a knack for big moments.</li> <br>
+                <li> <b>Antony</b>: The Brazilian winger for Manchester United is known for his flair, skillful dribbles, and ability to score from the flanks.</li> <br>
+                <li> <b>Marcus Rashford</b>: A dynamic forward for Manchester United, Rashford is celebrated for his pace, finishing ability, and contributions off the field.</li> <br>
+                <br>
+                <br>
+                <p style="align-items: center;"> Click <a href="playerStats.html">here</a> to read more about theese best performing players </p>
+            </ul>
+        </div>
+    </div>
+    
+
+    <footer class="footer">
+        <a href="index.html"><img src="../images/logofinal.png" alt="logo-image" class="logo_image"></a>
+        <p> All rights reserved. Made by Enis Bulbulusic. This page is made for Web Development Course </p>
+        
+        <!---Adding icons with social media platforms --->
+        <div class="icons">
+            <a href="https://www.instagram.com/enzyy_b_/?hl=hr" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100009127920338" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://github.com/Enis0502"><i class="fa-brands fa-github" target="_blank"></i></a>
+        </div>
+    </footer>
+
+    <script src="../JS/index.js"></script>
+    <script src="../JS/darkmode.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+[
+    {
+      "name": "Cole Palmer",
+      "age": 21,
+      "currentClub": "Chelsea",
+      "position": "Midfielder"
+    },
+
+    {
+      "name": "Kieran Trippier",
+      "age": 33,
+      "currentClub": "Newcastle United",
+      "position": "Left back"
+    },
+
+    {
+      "name": "Emiliano Martínez",
+      "age": 31,
+      "currentClub": "Aston Villa",
+      "position": "Goalkeeper"
+    },
+
+    {
+      "name": "Adama Traore",
+      "age": 27,
+      "currentClub": "Fulham",
+      "position": "Striker/winger"
+    },
+
+    {
+      "name": "Jamie Vardy",
+      "age": 37,
+      "currentClub": "Leicester City",
+      "position": "Striker"
+    },
+
+    {
+      "name": "Mohamed Salah",
+      "age": 32,
+      "currentClub": "Liverpool",
+      "position": "Winger"
+    },
+
+    {
+      "name": "Jeremy Doku",
+      "age": 21,
+      "currentClub": "Manchester City",
+      "position": "Striker"
+    },
+    {
+      "name": "Phil Foden",
+      "age": 23,
+      "currentClub": "Manchester City",
+      "position": "Center-attacking midfielder"
+    },
+    {
+      "name": "Antony",
+      "age": 23,
+      "currentClub": "Manchester United",
+      "position": "Striker"
+    },
+    {
+      "name": "Marcus Rashford",
+      "age": 26,
+      "currentClub": "Manchester United",
+      "position": "Winger"
+    }
+  ]
+  
